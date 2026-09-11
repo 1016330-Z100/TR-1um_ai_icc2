@@ -1,0 +1,18 @@
+** sch_path: /home/ubuntu/schematic/COMP_aki.sch
+.subckt COMP_aki VCC OUT_C AGND BIAS CIN REF
+*.PININFO AGND:B CIN:B VCC:B OUT_C:B BIAS:B REF:B
+MMPP out cin_fb ptail ptail PMOS w=3.4u l=4u
+MMPN ncm REF ptail ptail PMOS w=3.4u l=4u
+MMP1 BIAS BIAS VCC VCC PMOS w=3.4u l=1u
+MMP2 ptail BIAS VCC VCC PMOS w=3.4u l=1u
+MMPOUT OUT_C out VCC VCC PMOS w=10u l=4u
+MMNC1 ncm ncm AGND AGND NMOS w=3.4u l=4u
+MMNC2 out ncm AGND AGND NMOS w=3.4u l=4u
+MMNOUT OUT_C out AGND AGND NMOS w=10u l=4u
+XR_IN1 cin_fb CIN VCC F_RR w=4.0e-06 l=13.6e-06
+XR_FB1 net1 cin_fb VCC F_RR w=2.8e-06 l=82.1e-06
+XR_FB2 net2 net1 VCC F_RR w=2.8e-06 l=82.1e-06
+XR_FB3 net3 net2 VCC F_RR w=2.8e-06 l=82.1e-06
+XR_FB4 net4 net3 VCC F_RR w=2.8e-06 l=82.1e-06
+XR_FB5 OUT_C net4 VCC F_RR w=2.8e-06 l=82.1e-06
+.ends
