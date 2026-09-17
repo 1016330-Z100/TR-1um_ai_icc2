@@ -8,7 +8,7 @@
 # Project metadata (used for documentation / review)
 # ======================================================
 project:
-  title: "TEST"        # Project title (e.g. "Simple CPU", "PLL", "ADC")
+  title: "OSC_COMP"        # Project title (e.g. "Simple CPU", "PLL", "ADC")
   author: "1016330"       # Your name
   discord: ""      # Optional: Discord username (for support / communication)
   description: ""  # Short one-line description
@@ -21,7 +21,7 @@ gds:
   # - start with "tr_1um_"
   # - include your GitHub username (for uniqueness)
   # Example: tr_1um_jun1okamura
-  top_cell: "HHTT2602"
+  top_cell: "TOP_pin_2"
 
   # File extension of layout
   extension: "gds"
